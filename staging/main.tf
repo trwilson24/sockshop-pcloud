@@ -112,6 +112,8 @@ resource "aws_instance" "k8s-master" {
   provisioner "local-exec" {
     command = "scp -i ${var.private_key_file} -o StrictHostKeyChecking=no ubuntu@${self.private_ip}:~/config ~/.kube/"
   }
+  ebs_optimized = true
+  monitoring = true
 }
 
 resource "null_resource" "up" {
