@@ -50,7 +50,6 @@ resource "aws_subnet" "terraform" {
   }
   availability_zone = "eu-west-1b"
 
-  map_public_ip_on_launch = true
 }
 
 resource "aws_route_table" "terraform" {

@@ -47,6 +47,8 @@ resource "aws_instance" "minimesos" {
       "/tmp/provision.sh"
     ]
   }
+  ebs_optimized = true
+  monitoring = true
 }
 
 
